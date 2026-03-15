@@ -19,3 +19,4 @@ Keep this list small and practical.
 - Pick one more discussion PPTX and migrate it to `discussion/<slug>/`
 - Keep framework/workflow fidelity as the main priority
 - Stop at roughly 80-90% if the remaining gap is low-value polish
+- For quiz identify slides, use a browser-friendly `70/30` or `68/32` text-to-image ratio by default

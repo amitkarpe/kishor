@@ -48,6 +48,12 @@ If a user asks for a:
 - discussion deck: use discussion framework + Kishor style by default
 - non-Kishor or generic design task: use the generic style system as needed
 
+For quiz identify slides, default browser-friendly layout should be:
+- text / hint / options block: 65-70%
+- image block: 30-35%
+- keep the image top-right
+- prioritize full visibility of hint and all 4 options over large photos
+
 ## Templates
 
 Starter templates live in:
