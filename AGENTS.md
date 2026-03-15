@@ -1,61 +1,113 @@
 # AGENTS.md
 
 ## Purpose
-This repository prioritizes fast, low-friction iteration on `main`, reliable GitHub Pages deployment for Marp slides, and minimal branch confusion.
 
-## Branching and PR policy
-- `main` is the only long-lived branch.
-- Every task must start from latest `main` and use a short-lived feature branch:
-  - `feat/<topic>`
-  - `fix/<topic>`
-  - `chore/<topic>`
-- All PRs must target `main` as base branch.
-- Before opening a PR, rebase or merge latest `main` into your feature branch.
-- Delete feature branch after merge.
-- Do not use old demo branches (for example `marp-2-slides`) unless explicitly requested.
+This repository is a Markdown-first, Marp-first presentation system for Kishor sessions.
 
-## Deployment workflow policy
-- Keep one canonical Pages workflow: `.github/workflows/static.yml`.
-- Workflow triggers must be:
-  - `push` to `main`
-  - `workflow_dispatch`
-- Prefer first-party GitHub Actions where possible.
-- Build Marp using:
-  - `npx --yes @marp-team/marp-cli slides.md --html -o dist/index.html`
-- Ensure `dist/.nojekyll` exists before upload.
-- Deploy with `actions/deploy-pages`.
+The live site is published on GitHub Pages and should support many presentations over time, grouped into:
+- `quiz`
+- `discussion`
 
-## Pages settings policy
-- GitHub Pages Source must be **GitHub Actions**.
-- If the site shows 404:
-  1. Verify `slides.md` exists on `main`.
-  2. Verify `.github/workflows/static.yml` exists on `main`.
-  3. Rerun the workflow from the Actions tab.
-  4. If failure happens at “Set up job”, check repository/organization Actions policy.
+## Core repo rules
+
+- Keep published decks at repo root:
+  - `quiz/<slug>/`
+  - `discussion/<slug>/`
+- Keep one deck per folder.
+- Each deck should normally contain:
+  - `slides.md`
+  - `meta.yml`
+  - `notes.md`
+- Optional deck assets belong in:
+  - `assets/`
+
+Do not create new published decks under `docs/`.
+
+## Source and framework rules
+
+Authoritative source/framework files live under:
+- `docs/sources/quiz/`
+- `docs/sources/discussion/`
+- `docs/sources/style/`
+- `docs/sources/shared/`
+
+Use these files first when the user asks to create or revise a deck:
+- `docs/sources/quiz/Quiz_Framework_for_Kishor_Workflow_UPDATED.md`
+- `docs/sources/discussion/Discussion_Framework_for_Kishor_Workflow.md`
+- `docs/sources/style/Kishor_Presentation_Style_System_Workflow.md`
+- `docs/sources/style/Presentation_Style_System_Workflow.md`
+
+Supporting references:
+- `docs/sources/shared/authoring_principles.md`
+- `docs/sources/shared/deck_shapes.md`
+- `docs/sources/shared/metadata_schema.md`
+- `docs/sources/shared/quality_checklist.md`
+
+If a user asks for a:
+- quiz deck: use quiz framework + Kishor style by default
+- discussion deck: use discussion framework + Kishor style by default
+- non-Kishor or generic design task: use the generic style system as needed
+
+## Templates
+
+Starter templates live in:
+- `templates/quiz/`
+- `templates/discussion/`
+
+Prefer copying/adapting those templates when creating a new deck.
+
+## Build and deployment policy
+
+Keep one canonical Pages workflow:
+- `.github/workflows/static.yml`
+
+Workflow triggers must remain:
+- `push` to `main`
+- `workflow_dispatch`
+
+The site build entrypoint is:
+- `bash scripts/build-site.sh`
+
+The Python builder:
+- reads deck metadata from `quiz/*/meta.yml` and `discussion/*/meta.yml`
+- renders each deck with Marp
+- generates the homepage index
+- copies local assets
+- creates `dist/.nojekyll`
+
+Prefer the smallest possible patch when updating the workflow or build logic.
+
+## Homepage/index rules
+
+The homepage must:
+- group decks by category
+- show title, category, date, and short description
+- link to each deck folder
+
+Each built deck should also keep a link back to the homepage.
+
+## Legacy import rules
+
+Use `legacy-import/` as staging only.
+
+Current legacy materials are not canonical published content. Normalize them into fresh Marp deck folders before publishing.
+
+Do not overwrite a published deck with raw imported PPTX-derived material unless explicitly requested.
 
 ## Execution behavior for Codex
+
 - Always show a brief plan before making changes.
-- Prefer the smallest possible patch.
-- Run checks after edits (lint/tests/build as applicable).
-- For workflow edits, validate YAML syntax and relevant commands.
-- If auth/push is unavailable, state it immediately and provide exact manual commands.
+- Prefer the smallest repo-consistent patch.
+- When creating a new deck, create a new folder instead of editing an old one unless the user explicitly asks for edits.
+- Preserve source provenance in `notes.md`.
+- Run relevant checks after edits:
+  - `python3 scripts/build_site.py`
+  - optional spot checks in `dist/`
+- For workflow issues, inspect the latest failed GitHub Actions run before changing Pages settings.
 
-## Commit/PR behavior
-- Use clear commit messages.
-- Include what changed and why in PR body.
-- Include exact verification commands in final summary.
-- Never leave repository with uncommitted changes at handoff unless explicitly requested.
+## Commit and handoff
 
-## Communication style
-- Be concise and action-oriented.
-- Always include a **What you should do now** section for manual follow-up.
-- If multiple options exist, recommend one default path.
-
-## Quick Start for Contributors
-1. Update local `main`:
-   - `git checkout main && git pull`
-2. Create a feature branch:
-   - `git checkout -b feat/<topic>`
-3. Build slides locally:
-   - `npx --yes @marp-team/marp-cli slides.md --html -o dist/index.html`
-4. Open a PR with base branch set to `main`.
+- Use clear, task-focused commit messages.
+- Keep docs aligned with behavior changes.
+- Never leave unrelated generated files committed unless needed.
+- In final summaries, include exact verification commands and a clear next action for the user.

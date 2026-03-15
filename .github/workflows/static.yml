@@ -29,11 +29,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Build slides with Marp
-        run: npx --yes @marp-team/marp-cli slides.md --html -o dist/index.html
-
-      - name: Ensure no Jekyll processing
-        run: touch dist/.nojekyll
+      - name: Build site
+        run: bash scripts/build-site.sh
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
