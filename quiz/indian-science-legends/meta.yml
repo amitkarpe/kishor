@@ -9,7 +9,8 @@ tags:
   - science
   - india
   - kishor
-status: sample
+status: published
 framework: Quiz_Framework_for_Kishor_Workflow_UPDATED
 style_system: Kishor_Presentation_Style_System_Workflow
-source_type: example
+source_type: pptx_migration
+legacy_bundle: Kishor_Quiz_Decks_Bundle.zip
