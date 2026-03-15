@@ -76,13 +76,38 @@ style: |
   }
   .photo {
     display: block;
-    margin: 0.85rem auto 1rem;
-    width: 57%;
-    max-height: 280px;
+    margin: 0;
+    width: 100%;
+    max-height: 220px;
     object-fit: contain;
     border-radius: 16px;
     background: #111;
     box-shadow: 0 10px 32px rgba(0,0,0,0.28);
+  }
+  .identify-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(210px, 0.65fr);
+    gap: 1rem;
+    align-items: start;
+    margin-top: 0.8rem;
+  }
+  .identify-copy {
+    min-width: 0;
+  }
+  .identify-media {
+    align-self: start;
+  }
+  .identify-copy .options {
+    margin-top: 0.65rem;
+  }
+  @media (max-width: 900px) {
+    .identify-grid {
+      grid-template-columns: 1fr;
+    }
+    .identify-media {
+      order: -1;
+      max-width: 260px;
+    }
   }
 ---
 
@@ -105,16 +130,20 @@ Fast Zoom Lite Quiz Deck
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-2-1.jpg" alt="A. P. J. Abdul Kalam">
-
-**Hint:** Missile Man of India
-
-<ul class="options">
-  <li>A. A. P. J. Abdul Kalam</li>
-  <li>B. C. V. Raman</li>
-  <li>C. Homi J. Bhabha</li>
-  <li>D. Vikram Sarabhai</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Missile Man of India</p>
+    <ul class="options">
+      <li>A. A. P. J. Abdul Kalam</li>
+      <li>B. C. V. Raman</li>
+      <li>C. Homi J. Bhabha</li>
+      <li>D. Vikram Sarabhai</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-2-1.jpg" alt="A. P. J. Abdul Kalam">
+  </div>
+</div>
 
 ---
 
@@ -147,16 +176,20 @@ Which office did he later hold?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-5-1.jpg" alt="C. V. Raman">
-
-**Hint:** Raman Effect scientist
-
-<ul class="options">
-  <li>A. Vikram Sarabhai</li>
-  <li>B. C. V. Raman</li>
-  <li>C. A. P. J. Abdul Kalam</li>
-  <li>D. Homi J. Bhabha</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Raman Effect scientist</p>
+    <ul class="options">
+      <li>A. Vikram Sarabhai</li>
+      <li>B. C. V. Raman</li>
+      <li>C. A. P. J. Abdul Kalam</li>
+      <li>D. Homi J. Bhabha</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-5-1.jpg" alt="C. V. Raman">
+  </div>
+</div>
 
 ---
 
@@ -189,16 +222,20 @@ Which major prize did he win?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-8-1.jpg" alt="Homi J. Bhabha">
-
-**Hint:** Nuclear programme pioneer
-
-<ul class="options">
-  <li>A. C. V. Raman</li>
-  <li>B. Vikram Sarabhai</li>
-  <li>C. Homi J. Bhabha</li>
-  <li>D. A. P. J. Abdul Kalam</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Nuclear programme pioneer</p>
+    <ul class="options">
+      <li>A. C. V. Raman</li>
+      <li>B. Vikram Sarabhai</li>
+      <li>C. Homi J. Bhabha</li>
+      <li>D. A. P. J. Abdul Kalam</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-8-1.jpg" alt="Homi J. Bhabha">
+  </div>
+</div>
 
 ---
 
@@ -231,16 +268,20 @@ Which field is he most associated with?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-11-1.jpg" alt="Vikram Sarabhai">
-
-**Hint:** Space programme father
-
-<ul class="options">
-  <li>A. C. V. Raman</li>
-  <li>B. Homi J. Bhabha</li>
-  <li>C. Jagadish Chandra Bose</li>
-  <li>D. Vikram Sarabhai</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Space programme father</p>
+    <ul class="options">
+      <li>A. C. V. Raman</li>
+      <li>B. Homi J. Bhabha</li>
+      <li>C. Jagadish Chandra Bose</li>
+      <li>D. Vikram Sarabhai</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-11-1.jpg" alt="Vikram Sarabhai">
+  </div>
+</div>
 
 ---
 
@@ -273,16 +314,20 @@ Which national programme is he most linked with?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-14-1.jpg" alt="Jagadish Chandra Bose">
-
-**Hint:** Plants and radio science
-
-<ul class="options">
-  <li>A. Jagadish Chandra Bose</li>
-  <li>B. Homi J. Bhabha</li>
-  <li>C. Vikram Sarabhai</li>
-  <li>D. Srinivasa Ramanujan</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Plants and radio science</p>
+    <ul class="options">
+      <li>A. Jagadish Chandra Bose</li>
+      <li>B. Homi J. Bhabha</li>
+      <li>C. Vikram Sarabhai</li>
+      <li>D. Srinivasa Ramanujan</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-14-1.jpg" alt="Jagadish Chandra Bose">
+  </div>
+</div>
 
 ---
 
@@ -315,16 +360,20 @@ Which field is he strongly linked with?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-17-1.jpg" alt="Srinivasa Ramanujan">
-
-**Hint:** Math genius from India
-
-<ul class="options">
-  <li>A. Satyendra Nath Bose</li>
-  <li>B. Srinivasa Ramanujan</li>
-  <li>C. Vikram Sarabhai</li>
-  <li>D. Jagadish Chandra Bose</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Math genius from India</p>
+    <ul class="options">
+      <li>A. Satyendra Nath Bose</li>
+      <li>B. Srinivasa Ramanujan</li>
+      <li>C. Vikram Sarabhai</li>
+      <li>D. Jagadish Chandra Bose</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-17-1.jpg" alt="Srinivasa Ramanujan">
+  </div>
+</div>
 
 ---
 
@@ -357,16 +406,20 @@ Which field made him famous?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-20-1.jpg" alt="Satyendra Nath Bose">
-
-**Hint:** Boson name link
-
-<ul class="options">
-  <li>A. Srinivasa Ramanujan</li>
-  <li>B. M. S. Swaminathan</li>
-  <li>C. Satyendra Nath Bose</li>
-  <li>D. Jagadish Chandra Bose</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Boson name link</p>
+    <ul class="options">
+      <li>A. Srinivasa Ramanujan</li>
+      <li>B. M. S. Swaminathan</li>
+      <li>C. Satyendra Nath Bose</li>
+      <li>D. Jagadish Chandra Bose</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-20-1.jpg" alt="Satyendra Nath Bose">
+  </div>
+</div>
 
 ---
 
@@ -399,16 +452,20 @@ Which particle family is named after him?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-23-1.jpg" alt="M. S. Swaminathan">
-
-**Hint:** Green Revolution leader
-
-<ul class="options">
-  <li>A. Srinivasa Ramanujan</li>
-  <li>B. Satyendra Nath Bose</li>
-  <li>C. Har Gobind Khorana</li>
-  <li>D. M. S. Swaminathan</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Green Revolution leader</p>
+    <ul class="options">
+      <li>A. Srinivasa Ramanujan</li>
+      <li>B. Satyendra Nath Bose</li>
+      <li>C. Har Gobind Khorana</li>
+      <li>D. M. S. Swaminathan</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-23-1.jpg" alt="M. S. Swaminathan">
+  </div>
+</div>
 
 ---
 
@@ -441,16 +498,20 @@ Which movement is he most linked with?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-26-1.jpg" alt="Har Gobind Khorana">
-
-**Hint:** Genetics Nobel winner
-
-<ul class="options">
-  <li>A. Har Gobind Khorana</li>
-  <li>B. Satyendra Nath Bose</li>
-  <li>C. M. S. Swaminathan</li>
-  <li>D. Subrahmanyan Chandrasekhar</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Genetics Nobel winner</p>
+    <ul class="options">
+      <li>A. Har Gobind Khorana</li>
+      <li>B. Satyendra Nath Bose</li>
+      <li>C. M. S. Swaminathan</li>
+      <li>D. Subrahmanyan Chandrasekhar</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-26-1.jpg" alt="Har Gobind Khorana">
+  </div>
+</div>
 
 ---
 
@@ -483,16 +544,20 @@ Which major prize did he win?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-29-1.jpg" alt="Subrahmanyan Chandrasekhar">
-
-**Hint:** Stars and black holes
-
-<ul class="options">
-  <li>A. A. P. J. Abdul Kalam</li>
-  <li>B. Subrahmanyan Chandrasekhar</li>
-  <li>C. M. S. Swaminathan</li>
-  <li>D. Har Gobind Khorana</li>
-</ul>
+<div class="identify-grid">
+  <div class="identify-copy">
+    <p><strong>Hint:</strong> Stars and black holes</p>
+    <ul class="options">
+      <li>A. A. P. J. Abdul Kalam</li>
+      <li>B. Subrahmanyan Chandrasekhar</li>
+      <li>C. M. S. Swaminathan</li>
+      <li>D. Har Gobind Khorana</li>
+    </ul>
+  </div>
+  <div class="identify-media">
+    <img class="photo" src="assets/slide-29-1.jpg" alt="Subrahmanyan Chandrasekhar">
+  </div>
+</div>
 
 ---
 
