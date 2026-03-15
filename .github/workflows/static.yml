@@ -24,10 +24,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build slides with Marp
-        uses: marp-team/marp-cli-action@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          args: slides.md --html -o dist/index.html
+          node-version: 22
+
+      - name: Build slides with Marp
+        run: npx --yes @marp-team/marp-cli slides.md --html -o dist/index.html
 
       - name: Ensure no Jekyll processing
         run: touch dist/.nojekyll
