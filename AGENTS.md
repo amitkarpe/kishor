@@ -98,6 +98,9 @@ Do not overwrite a published deck with raw imported PPTX-derived material unless
 
 - Always show a brief plan before making changes.
 - Prefer the smallest repo-consistent patch.
+- Follow KISS: keep it short and simple.
+- Amit prefers 80-90% useful framework-fit over chasing the last 10-20% of polish.
+- Do not spend excessive tokens trying to perfect visual details once the workflow/framework fit is good enough.
 - When creating a new deck, create a new folder instead of editing an old one unless the user explicitly asks for edits.
 - Preserve source provenance in `notes.md`.
 - Run relevant checks after edits:
@@ -111,3 +114,12 @@ Do not overwrite a published deck with raw imported PPTX-derived material unless
 - Keep docs aligned with behavior changes.
 - Never leave unrelated generated files committed unless needed.
 - In final summaries, include exact verification commands and a clear next action for the user.
+- Keep work on `main` unless Amit explicitly asks for branch/PR flow.
+
+## Current scope note
+
+- Do not try to convert all legacy decks now.
+- Current migration scope is only:
+  - 2 quiz decks total
+  - 2 discussion decks total
+- `discussion/what-is-dharma-really/` counts as the first discussion migration.
