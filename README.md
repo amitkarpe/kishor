@@ -23,4 +23,4 @@ Then open `dist/index.html` in your browser.
 To use this workflow deployment, set:
 - **Settings → Pages → Build and deployment → Source: GitHub Actions**
 
-The workflow deploys on push (any branch) and manual dispatch, so you can publish ASAP from your current branch without merging.
+The workflow deploys on push to `main` and manual dispatch.
