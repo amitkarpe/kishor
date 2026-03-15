@@ -105,7 +105,7 @@ Fast Zoom Lite Quiz Deck
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-2-1.png" alt="A. P. J. Abdul Kalam">
+<img class="photo" src="assets/slide-2-1.jpg" alt="A. P. J. Abdul Kalam">
 
 **Hint:** Missile Man of India
 
@@ -147,7 +147,7 @@ Which office did he later hold?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-5-1.png" alt="C. V. Raman">
+<img class="photo" src="assets/slide-5-1.jpg" alt="C. V. Raman">
 
 **Hint:** Raman Effect scientist
 
@@ -189,7 +189,7 @@ Which major prize did he win?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-8-1.png" alt="Homi J. Bhabha">
+<img class="photo" src="assets/slide-8-1.jpg" alt="Homi J. Bhabha">
 
 **Hint:** Nuclear programme pioneer
 
@@ -231,7 +231,7 @@ Which field is he most associated with?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-11-1.png" alt="Vikram Sarabhai">
+<img class="photo" src="assets/slide-11-1.jpg" alt="Vikram Sarabhai">
 
 **Hint:** Space programme father
 
@@ -273,7 +273,7 @@ Which national programme is he most linked with?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-14-1.png" alt="Jagadish Chandra Bose">
+<img class="photo" src="assets/slide-14-1.jpg" alt="Jagadish Chandra Bose">
 
 **Hint:** Plants and radio science
 
@@ -315,7 +315,7 @@ Which field is he strongly linked with?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-17-1.png" alt="Srinivasa Ramanujan">
+<img class="photo" src="assets/slide-17-1.jpg" alt="Srinivasa Ramanujan">
 
 **Hint:** Math genius from India
 
@@ -357,7 +357,7 @@ Which field made him famous?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-20-1.png" alt="Satyendra Nath Bose">
+<img class="photo" src="assets/slide-20-1.jpg" alt="Satyendra Nath Bose">
 
 **Hint:** Boson name link
 
@@ -399,7 +399,7 @@ Which particle family is named after him?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-23-1.png" alt="M. S. Swaminathan">
+<img class="photo" src="assets/slide-23-1.jpg" alt="M. S. Swaminathan">
 
 **Hint:** Green Revolution leader
 
@@ -441,7 +441,7 @@ Which movement is he most linked with?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-26-1.png" alt="Har Gobind Khorana">
+<img class="photo" src="assets/slide-26-1.jpg" alt="Har Gobind Khorana">
 
 **Hint:** Genetics Nobel winner
 
@@ -483,7 +483,7 @@ Which major prize did he win?
 
 # Who Is This?
 
-<img class="photo" src="assets/slide-29-1.png" alt="Subrahmanyan Chandrasekhar">
+<img class="photo" src="assets/slide-29-1.jpg" alt="Subrahmanyan Chandrasekhar">
 
 **Hint:** Stars and black holes
 
